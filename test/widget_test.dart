@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:markatty/main.dart';
-import 'package:markatty/modee_app.dart';
+import 'package:markatty/foodgo_app.dart';
 import 'package:markatty/Core/di/dependency_injection.dart';
 
 void main() {
@@ -18,7 +18,7 @@ void main() {
     await setupGetIt();
 
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const ModeeApp());
+    await tester.pumpWidget(const FoodGoApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
