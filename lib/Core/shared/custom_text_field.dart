@@ -8,7 +8,7 @@ class CustomTextFormField extends StatelessWidget {
     this.radio,
     this.hintText,
     this.prefixIcon,
-    this.labelText,
+    this.labelText = '',
     this.isObsecureText,
     this.controller,
     this.onChanged,
@@ -43,7 +43,12 @@ class CustomTextFormField extends StatelessWidget {
         validator: (v) {
           if (serverErrorText != null && serverErrorText!.isNotEmpty)
             return serverErrorText;
-          if (validator != null) return validator!(v);
+          if (validator != null) {
+            return validator!(v);
+          }
+          if (v == null) {
+            return 'Please fill ${hintText}';
+          }
           return null;
         },
         controller: controller,
