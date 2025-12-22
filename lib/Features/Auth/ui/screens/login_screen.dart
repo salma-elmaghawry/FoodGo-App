@@ -19,44 +19,39 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: AppColors.background,
         body: Padding(
           padding: const EdgeInsets.all(16),
-          child: SingleChildScrollView(
-            child: Center(
-              child: Column(
-                children: [
-                  verticalSpace(200),
-                  SvgPicture.asset(AppImages.logoSVG, color: AppColors.primary),
-                  verticalSpace(20),
-                  Text(
-                    "Welcome Back to FoodGo!",
-                    style: AppTextStyles.poppins16Regular(
-                      color: AppColors.primary,
-                    ),
+          child: Center(
+            child: Column(
+              children: [
+                verticalSpace(150),
+                SvgPicture.asset(AppImages.logoSVG, color: AppColors.primary),
+                verticalSpace(15),
+                Text(
+                  "Welcome Back to FoodGo!",
+                  style: AppTextStyles.poppins16Regular(
+                    color: AppColors.primary,
                   ),
-                  verticalSpace(20),
-
-                  verticalSpace(20),
-                  CustomTextFormField(hintText: 'Email', labelText: 'Email'),
-                  verticalSpace(20),
-                  CustomPasswordField(
-                    hintText: 'Password',
-                    labelText: 'Password',
+                ),
+                verticalSpace(20),
+                CustomTextFormField(hintText: 'Email'),
+                verticalSpace(20),
+                CustomPasswordField(
+                  hintText: 'Password',
+                ),
+                verticalSpace(20),
+                CustomButton(
+                  title: 'Login',
+                  backgroundColor: AppColors.primary,
+                  textColor: AppColors.white,
+                  onPressed: () {},
+                ),
+                verticalSpace(20),
+                Text(
+                  "Don't have an account?",
+                  style: AppTextStyles.poppins16Regular(
+                    color: AppColors.white,
                   ),
-                  verticalSpace(20),
-                  CustomButton(
-                    title: 'Login',
-                    backgroundColor: AppColors.primary,
-                    textColor: AppColors.white,
-                    onPressed: () {},
-                  ),
-                  verticalSpace(20),
-                  Text(
-                    "Don't have an account?",
-                    style: AppTextStyles.poppins16Regular(
-                      color: AppColors.white,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),

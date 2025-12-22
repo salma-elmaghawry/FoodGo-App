@@ -20,16 +20,20 @@ class CustomButton extends StatelessWidget {
     return Container(
       height: 55,
       width: double.infinity,
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
+
       child: ElevatedButton(
+        onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor ?? AppColors.primary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+          ),
         ),
-        onPressed: onPressed,
         child: Text(
           title,
-          style: AppTextStyles.poppins16Regular(
+          style: AppTextStyles.poppins24Bold(
             color: textColor ?? AppColors.primary,
+            fontSize: 20,
           ),
         ),
       ),
