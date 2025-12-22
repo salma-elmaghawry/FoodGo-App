@@ -4,123 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:markatty/Core/Theme/app_colors.dart';
 
 class AppTextStyles {
-  static TextStyle quicksand24Bold({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
+  static TextStyle poppins24Bold({Color? color, double? fontSize}) {
+    return GoogleFonts.poppins(
       fontSize: fontSize?.sp ?? 24.sp,
       fontWeight: FontWeight.bold,
       color: color,
     );
   }
 
-  static TextStyle quicksand20Regular({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 20.sp,
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-  }
-
-  static TextStyle quicksand20BoldW({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 20.sp,
-      fontWeight: FontWeight.w700,
-      color: color ?? AppColors.white,
-    );
-  }
-
-  static TextStyle quicksand20BoldB({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 20.sp,
-      fontWeight: FontWeight.w700,
-      color: color ?? AppColors.primary,
-    );
-  }
-
-  static TextStyle quicksand18Regular({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 18.sp,
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-  }
-
-  static TextStyle quicksand18BoldB({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 18.sp,
-      fontWeight: FontWeight.w700,
-      color: color ?? AppColors.primary,
-    );
-  }
-
-  static TextStyle quicksand18BoldW({Color? color, double? fontSize}) {
-    return GoogleFonts.quicksand(
-      fontSize: fontSize?.sp ?? 18.sp,
-      fontWeight: FontWeight.w700,
-      color: color ?? AppColors.white,
-    );
-  }
-
   static TextStyle poppins16Regular({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
       fontSize: fontSize?.sp ?? 16.sp,
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins16Bold({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 16.sp,
-      fontWeight: FontWeight.bold,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins16SemiBoldButton({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 16.sp,
-      fontWeight: FontWeight.w600,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins14Regular({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 14.sp,
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins14Bold({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 14.sp,
-      fontWeight: FontWeight.w500,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins12Regular({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 12.sp,
-      fontWeight: FontWeight.normal,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins12Bold({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      fontSize: fontSize?.sp ?? 12.sp,
-      fontWeight: FontWeight.w500,
-      color: color,
-    );
-  }
-
-  static TextStyle poppins12RegularUnderline({Color? color, double? fontSize}) {
-    return GoogleFonts.poppins(
-      decoration: TextDecoration.underline,
-      decorationColor: AppColors.primary,
-      fontSize: fontSize?.sp ?? 12.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
