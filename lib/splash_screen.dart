@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:markatty/Core/Helpers/spacing.dart';
 import 'package:markatty/Core/Theme/app_colors.dart';
 import 'package:markatty/Core/Theme/app_images.dart';
-import 'package:markatty/Core/Theme/app_text_styles.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -11,18 +10,25 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primary,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          verticalSpace(20),
-          SvgPicture.asset(AppImages.logoSVG),
-
-          Text(
-            'FoodGo',
-            style: AppTextStyles.quicksand24Bold(color: AppColors.white),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomLeft,
+            colors: [AppColors.linearGradientStart, AppColors.primary],
           ),
-        ],
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              verticalSpace(300),
+              SvgPicture.asset(AppImages.logoSVG),
+              Spacer(),
+              Image.asset(AppImages.foodInSplash),
+            ],
+          ),
+        ),
       ),
     );
   }

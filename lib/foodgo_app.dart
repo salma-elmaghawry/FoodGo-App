@@ -16,7 +16,7 @@ class FoodGoApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: AppColors.background),
         onGenerateRoute: AppRouter().generateRoute,
-        initialRoute: Routes.splash,
+        initialRoute: Routes.login,
         onUnknownRoute: (settings) {
           return MaterialPageRoute(
             builder: (context) => Scaffold(
