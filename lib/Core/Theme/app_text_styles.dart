@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markatty/Core/Theme/app_colors.dart';
 
 class AppTextStyles {
   static TextStyle quicksand24Bold({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 24,
+      fontSize: fontSize?.sp ?? 24.sp,
       fontWeight: FontWeight.bold,
       color: color,
     );
@@ -13,7 +14,7 @@ class AppTextStyles {
 
   static TextStyle quicksand20Regular({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 20,
+      fontSize: fontSize?.sp ?? 20.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
@@ -21,7 +22,7 @@ class AppTextStyles {
 
   static TextStyle quicksand20BoldW({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 20,
+      fontSize: fontSize?.sp ?? 20.sp,
       fontWeight: FontWeight.w700,
       color: color ?? AppColors.white,
     );
@@ -29,7 +30,7 @@ class AppTextStyles {
 
   static TextStyle quicksand20BoldB({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 20,
+      fontSize: fontSize?.sp ?? 20.sp,
       fontWeight: FontWeight.w700,
       color: color ?? AppColors.primary,
     );
@@ -37,7 +38,7 @@ class AppTextStyles {
 
   static TextStyle quicksand18Regular({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 18,
+      fontSize: fontSize?.sp ?? 18.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
@@ -45,7 +46,7 @@ class AppTextStyles {
 
   static TextStyle quicksand18BoldB({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 18,
+      fontSize: fontSize?.sp ?? 18.sp,
       fontWeight: FontWeight.w700,
       color: color ?? AppColors.primary,
     );
@@ -53,7 +54,7 @@ class AppTextStyles {
 
   static TextStyle quicksand18BoldW({Color? color, double? fontSize}) {
     return GoogleFonts.quicksand(
-      fontSize: fontSize ?? 18,
+      fontSize: fontSize?.sp ?? 18.sp,
       fontWeight: FontWeight.w700,
       color: color ?? AppColors.white,
     );
@@ -61,7 +62,7 @@ class AppTextStyles {
 
   static TextStyle poppins16Regular({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 16,
+      fontSize: fontSize?.sp ?? 16.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
@@ -69,7 +70,7 @@ class AppTextStyles {
 
   static TextStyle poppins16Bold({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 16,
+      fontSize: fontSize?.sp ?? 16.sp,
       fontWeight: FontWeight.bold,
       color: color,
     );
@@ -77,7 +78,7 @@ class AppTextStyles {
 
   static TextStyle poppins16SemiBoldButton({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 16,
+      fontSize: fontSize?.sp ?? 16.sp,
       fontWeight: FontWeight.w600,
       color: color,
     );
@@ -85,7 +86,7 @@ class AppTextStyles {
 
   static TextStyle poppins14Regular({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 14,
+      fontSize: fontSize?.sp ?? 14.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
@@ -93,7 +94,7 @@ class AppTextStyles {
 
   static TextStyle poppins14Bold({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 14,
+      fontSize: fontSize?.sp ?? 14.sp,
       fontWeight: FontWeight.w500,
       color: color,
     );
@@ -101,7 +102,7 @@ class AppTextStyles {
 
   static TextStyle poppins12Regular({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 12,
+      fontSize: fontSize?.sp ?? 12.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
@@ -109,7 +110,7 @@ class AppTextStyles {
 
   static TextStyle poppins12Bold({Color? color, double? fontSize}) {
     return GoogleFonts.poppins(
-      fontSize: fontSize ?? 12,
+      fontSize: fontSize?.sp ?? 12.sp,
       fontWeight: FontWeight.w500,
       color: color,
     );
@@ -119,8 +120,7 @@ class AppTextStyles {
     return GoogleFonts.poppins(
       decoration: TextDecoration.underline,
       decorationColor: AppColors.primary,
-
-      fontSize: fontSize ?? 12,
+      fontSize: fontSize?.sp ?? 12.sp,
       fontWeight: FontWeight.normal,
       color: color,
     );
