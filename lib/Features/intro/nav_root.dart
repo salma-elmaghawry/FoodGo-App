@@ -69,15 +69,14 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
         children: screens,
         onPageChanged: (index) {
           setState(() => currentScreen = index);
-          // Animate selected icon
           iconControllers[index].forward();
-          // Reverse others
           for (var i = 0; i < iconControllers.length; i++) {
             if (i != index) iconControllers[i].reverse();
           }
         },
       ),
       bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(3),
         decoration: BoxDecoration(
           color: AppColors.primary,
           borderRadius: BorderRadius.only(
