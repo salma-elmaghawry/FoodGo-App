@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:markatty/Core/Networking/api_constants.dart';
+import 'package:foodgo_app/Core/Networking/api_constants.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class ApiException implements Exception {

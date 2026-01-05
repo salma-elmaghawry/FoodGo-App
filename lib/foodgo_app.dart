@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:markatty/Config/Routes/app_router.dart';
-import 'package:markatty/Config/Routes/routes.dart';
-import 'package:markatty/Core/Theme/app_colors.dart';
+import 'package:foodgo_app/Config/Routes/app_router.dart';
+import 'package:foodgo_app/Config/Routes/routes.dart';
+import 'package:foodgo_app/Core/Theme/app_colors.dart';
 
 class FoodGoApp extends StatelessWidget {
   const FoodGoApp({super.key});
@@ -16,7 +16,7 @@ class FoodGoApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: AppColors.background),
         onGenerateRoute: AppRouter().generateRoute,
-        initialRoute: Routes.register,
+        initialRoute: Routes.navBar,
         onUnknownRoute: (settings) {
           return MaterialPageRoute(
             builder: (context) => Scaffold(

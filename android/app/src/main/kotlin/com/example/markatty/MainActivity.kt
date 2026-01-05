@@ -1,4 +1,4 @@
-package com.example.markatty
+package com.example.foodgo_app
 
 import io.flutter.embedding.android.FlutterActivity
 
