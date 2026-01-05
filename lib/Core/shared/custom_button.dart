@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:markatty/Core/Theme/app_colors.dart';
-import 'package:markatty/Core/Theme/app_text_styles.dart';
+import 'package:foodgo_app/Core/Theme/app_colors.dart';
+import 'package:foodgo_app/Core/Theme/app_text_styles.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;

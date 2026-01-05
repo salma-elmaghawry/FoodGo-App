@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:markatty/Core/Networking/api_service.dart';
+import 'package:foodgo_app/Core/Networking/api_service.dart';
 
 final getIt = GetIt.instance;
 

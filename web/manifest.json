@@ -1,6 +1,6 @@
 {
-    "name": "markatty",
-    "short_name": "markatty",
+    "name": "FoodGo",
+    "short_name": "FoodGo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
