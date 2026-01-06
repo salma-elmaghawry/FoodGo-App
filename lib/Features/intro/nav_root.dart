@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:foodgo_app/Core/Theme/app_colors.dart';
 import 'package:foodgo_app/Features/cart/screens/cart_screen.dart';
 import 'package:foodgo_app/Features/checkout/screens/checkout_screen.dart';
-import 'package:foodgo_app/Features/home/home_screen.dart';
+import 'package:foodgo_app/Features/home/screens/home_screen.dart';
 import 'package:foodgo_app/Features/profile/screens/profile_screen.dart';
 
 class NavRoot extends StatefulWidget {

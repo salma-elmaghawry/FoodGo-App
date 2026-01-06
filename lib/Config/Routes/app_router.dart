@@ -4,7 +4,7 @@ import 'package:foodgo_app/Features/auth/ui/screens/login_screen.dart';
 import 'package:foodgo_app/Features/auth/ui/screens/register_screen.dart';
 import 'package:foodgo_app/Features/cart/screens/cart_screen.dart';
 import 'package:foodgo_app/Features/checkout/screens/checkout_screen.dart';
-import 'package:foodgo_app/Features/home/home_screen.dart';
+import 'package:foodgo_app/Features/home/screens/home_screen.dart';
 import 'package:foodgo_app/Features/intro/nav_root.dart';
 import 'package:foodgo_app/Features/intro/splash_screen.dart';
 import 'package:foodgo_app/Features/profile/screens/profile_screen.dart';
