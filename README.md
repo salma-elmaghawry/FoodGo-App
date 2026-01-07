@@ -11,13 +11,6 @@ FoodGo is a premium, modern food delivery application built with Flutter. It fea
 - **Fully Responsive**: Built with `flutter_screenutil` to ensure the UI looks stunning on any device size.
 - **Modular Architecture**: Clean, reusable widget structure for high maintainability.
 
-## 🛠️ Technology Stack
-
-- **Framework**: [Flutter](https://flutter.dev/)
-- **Language**: [Dart](https://dart.dev/)
-- **Typography**: [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
-- **Icons & Assets**: Custom SVG integration using `flutter_svg`.
-- **Responsive Design**: `flutter_screenutil`
 
 ## 📁 Project Structure
 
@@ -42,6 +35,13 @@ lib/
 | ![Home](assets/screenshots/splash.png) | ![Cards](assets/screenshots/home.png) |
 
 ---
+## 🛠️ Technology Stack
+
+- **Framework**: [Flutter](https://flutter.dev/)
+- **Language**: [Dart](https://dart.dev/)
+- **Typography**: [Google Fonts - Poppins](https://fonts.google.com/specimen/Poppins)
+- **Icons & Assets**: Custom SVG integration using `flutter_svg`.
+- **Responsive Design**: `flutter_screenutil`
 
 ## 🚀 Getting Started
 
