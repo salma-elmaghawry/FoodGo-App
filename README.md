@@ -61,4 +61,4 @@ lib/
    ```
 
 
-Developed with ❤️ by [Salma Elmaghawry](https://github.com/salmaelmaghawry)
+Developed with ❤️ by [Salma Elmaghawry](https://github.com/salma-elmaghawry)
