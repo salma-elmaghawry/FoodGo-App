@@ -7,4 +7,8 @@ class AppImages {
   static const String foodInSplash = 'assets/splash/foodInSplash.png';
   //home
   static const String girlInHome = 'assets/home/girl.png';
+  static const String starSVG = 'assets/home/star.svg';
+  static const String heartSVG = 'assets/home/heart.svg';
+
+  
 }

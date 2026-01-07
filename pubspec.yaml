@@ -42,6 +42,7 @@ flutter:
     - assets/logo/
     - assets/splash/
     - assets/home/
+    - assets/test/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

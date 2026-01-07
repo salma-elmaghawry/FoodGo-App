@@ -65,6 +65,7 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
         controller: controller,
         children: screens,
         onPageChanged: (index) {
@@ -76,7 +77,7 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
         },
       ),
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.all(3),
+        padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: AppColors.primary,
           borderRadius: BorderRadius.only(
