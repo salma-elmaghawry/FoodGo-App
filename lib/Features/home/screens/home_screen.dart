@@ -6,6 +6,10 @@ import 'package:foodgo_app/Core/Theme/app_colors.dart';
 import 'package:foodgo_app/Core/Theme/app_images.dart';
 import 'package:foodgo_app/Core/Theme/app_text_styles.dart';
 import 'package:foodgo_app/Core/shared/custom_text_field.dart';
+import 'package:foodgo_app/Features/home/widgets/category_section.dart';
+import 'package:foodgo_app/Features/home/widgets/food_card.dart';
+import 'package:foodgo_app/Features/home/widgets/home_header.dart';
+import 'package:foodgo_app/Features/home/widgets/search_section.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,6 +29,33 @@ class _HomeScreenState extends State<HomeScreen> {
     'Burger',
   ];
 
+  final List<Map<String, String>> foodItems = [
+    {
+      'title': "Cheeseburger",
+      'subtitle': "Wendy's Burger",
+      'rating': "4.9",
+      'image': "assets/test/test.png",
+    },
+    {
+      'title': "Hamburger",
+      'subtitle': "Veggie Burger",
+      'rating': "4.8",
+      'image': "assets/test/test.png",
+    },
+    {
+      'title': "Hamburger",
+      'subtitle': "Chicken Burger",
+      'rating': "4.6",
+      'image': "assets/test/test.png",
+    },
+    {
+      'title': "Hamburger",
+      'subtitle': "Fried Chicken",
+      'rating': "4.5",
+      'image': "assets/test/test.png",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -37,121 +68,45 @@ class _HomeScreenState extends State<HomeScreen> {
               verticalSpace(70),
 
               ///header
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SvgPicture.asset(
-                        AppImages.logoSVG,
-                        height: 45,
-                        colorFilter: ColorFilter.mode(
-                          AppColors.primary,
-                          BlendMode.srcIn,
-                        ),
-                      ),
-                      verticalSpace(5),
-                      Text(
-                        'Order your favourite food!',
-                        style: AppTextStyles.poppins16Regular(),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15),
-                      image: DecorationImage(
-                        image: AssetImage(AppImages.girlInHome),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              HomeHeader(),
               verticalSpace(20),
 
               ///search
-              Row(
-                children: [
-                  Expanded(
-                    child: CustomTextFormField(
-                      fillcolor: AppColors.white,
-                      hasShadow: true,
-                      hintText: 'Search',
-                      prefixIcon: Icon(
-                        CupertinoIcons.search,
-                        color: AppColors.black,
-                      ),
-                      borderRadius: 15,
-                    ),
-                  ),
-                  horizontalSpace(15),
-                  Container(
-                    height: 55,
-                    width: 55,
-                    decoration: BoxDecoration(
-                      color: AppColors.primary,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Icon(
-                      CupertinoIcons.slider_horizontal_3,
-                      color: AppColors.white,
-                    ),
-                  ),
-                ],
-              ),
+              SearchSection(),
               verticalSpace(20),
 
               ///Categories
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(categories.length, (index) {
-                    bool isSelected = selectedIndex == index;
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedIndex = index;
-                        });
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(right: 15),
-                        height: 45,
-                        alignment: Alignment.center,
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        decoration: BoxDecoration(
-                          color: isSelected
-                              ? AppColors.primary
-                              : AppColors.textFieldBackground,
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: isSelected
-                              ? [
-                                  BoxShadow(
-                                    color: AppColors.primary.withValues(
-                                      alpha: 0.25,
-                                    ),
-                                    blurRadius: 5,
-                                    offset: const Offset(0, 3),
-                                  ),
-                                ]
-                              : [],
-                        ),
-                        child: Text(
-                          categories[index],
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: AppTextStyles.poppins16Regular(
-                            color: isSelected
-                                ? AppColors.white
-                                : AppColors.grey,
-                          ),
-                        ),
-                      ),
+              CategorySection(
+                categories: categories,
+                selectedIndex: selectedIndex,
+                onCategorySelected: (index) {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+              ),
+              verticalSpace(20),
+
+              ///Card item
+              Expanded(
+                child: GridView.builder(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 15,
+                    childAspectRatio: 0.72,
+                  ),
+                  itemCount: foodItems.length,
+                  itemBuilder: (context, index) {
+                    final item = foodItems[index];
+                    return FoodCard(
+                      title: item['title']!,
+                      subtitle: item['subtitle']!,
+                      rating: item['rating']!,
+                      imagePath: item['image']!,
                     );
-                  }),
+                  },
                 ),
               ),
             ],
