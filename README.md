@@ -7,11 +7,8 @@ FoodGo is a premium, modern food delivery application built with Flutter. It fea
 - **Dynamic Home Screen**: A clean and intuitive dashboard to explore top-rated food.
 - **Categorized Browsing**: Quickly filter through various food types like Burgers, Pizza, Classics, and more.
 - **Premium Food Cards**: Beautifully designed cards featuring high-quality images, star ratings, and quick "favorite" toggles.
-- **Search & Filter**: Find exactly what you're craving with a modern search interface and filter controls.
 - **Interactive Product Customization**: Adjust spicy level and portions with intuitive, styled controls.
 - **Scrollable Toppings & Sides**: Select from a variety of ingredients with a sleek, horizontal scrolling interface and dark-themed cards.
-- **Dynamic Sticky AppBar**: Sophisticated header transition from transparent to solid white upon scrolling for improved readability.
-- **Persistent Order Bar**: Fixed footer for immediate access to total price and checkout action.
 - **Modular Architecture**: Clean, reusable widget structure for high maintainability.
 
 
