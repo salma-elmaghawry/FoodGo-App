@@ -10,6 +10,7 @@ import 'package:foodgo_app/Features/home/widgets/category_section.dart';
 import 'package:foodgo_app/Features/home/widgets/food_card.dart';
 import 'package:foodgo_app/Features/home/widgets/home_header.dart';
 import 'package:foodgo_app/Features/home/widgets/search_section.dart';
+import 'package:foodgo_app/Features/product/screens/product_details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -100,11 +101,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   itemCount: foodItems.length,
                   itemBuilder: (context, index) {
                     final item = foodItems[index];
-                    return FoodCard(
-                      title: item['title']!,
-                      subtitle: item['subtitle']!,
-                      rating: item['rating']!,
-                      imagePath: item['image']!,
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ProductDetailsScreen(),
+                          ),
+                        );
+                      },
+                      child: FoodCard(
+                        title: item['title']!,
+                        subtitle: item['subtitle']!,
+                        rating: item['rating']!,
+                        imagePath: item['image']!,
+                      ),
                     );
                   },
                 ),
