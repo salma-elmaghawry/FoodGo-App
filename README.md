@@ -8,7 +8,10 @@ FoodGo is a premium, modern food delivery application built with Flutter. It fea
 - **Categorized Browsing**: Quickly filter through various food types like Burgers, Pizza, Classics, and more.
 - **Premium Food Cards**: Beautifully designed cards featuring high-quality images, star ratings, and quick "favorite" toggles.
 - **Search & Filter**: Find exactly what you're craving with a modern search interface and filter controls.
-- **Fully Responsive**: Built with `flutter_screenutil` to ensure the UI looks stunning on any device size.
+- **Interactive Product Customization**: Adjust spicy level and portions with intuitive, styled controls.
+- **Scrollable Toppings & Sides**: Select from a variety of ingredients with a sleek, horizontal scrolling interface and dark-themed cards.
+- **Dynamic Sticky AppBar**: Sophisticated header transition from transparent to solid white upon scrolling for improved readability.
+- **Persistent Order Bar**: Fixed footer for immediate access to total price and checkout action.
 - **Modular Architecture**: Clean, reusable widget structure for high maintainability.
 
 
@@ -26,13 +29,16 @@ lib/
     ├── Home/
     │   ├── Screens/   # Main Home View
     │   └── Widgets/   # Modular components (FoodCard, HomeHeader, etc.)
+    ├── Product/
+    │   ├── Screens/   # Product Details View
+    │   └── Widgets/   # Customization, Options, and Order Bar widgets
     └── Intro/         # Navigational roots and onboarding
 ```
 ## 📸 UI Preview
 
-| Home Screen | Food Grid |
-| :---: | :---: |
-| ![Home](assets/screenshots/splash.png) | ![Cards](assets/screenshots/home.png) |
+| Splash Screen | Home Screen | Product Details | Product Options |
+| :---: | :---: | :---: | :---: |
+| ![Splash](assets/screenshots/splash.png) | ![Home](assets/screenshots/home.png) | ![Product Details](assets/screenshots/product_details_1.png) | ![Product Options](assets/screenshots/product_details_2.png) |
 
 ---
 ## 🛠️ Technology Stack
@@ -47,7 +53,7 @@ lib/
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/FoodGo-App.git
+   git clone https://github.com/salma-elmaghawry/FoodGo-App.git
    ```
 
 2. **Install dependencies**:
