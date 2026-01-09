@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:foodgo_app/Core/Helpers/spacing.dart';
 import 'package:foodgo_app/Core/Theme/app_colors.dart';
-import 'package:foodgo_app/Core/shared/custom_text_field.dart';
+import 'package:foodgo_app/Core/widgets/custom_text_field.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodgo_app/Config/Routes/routes.dart';
-import 'package:foodgo_app/Core/Helpers/spacing.dart';
 import 'package:foodgo_app/Core/Theme/app_colors.dart';
 import 'package:foodgo_app/Core/Theme/app_images.dart';
 

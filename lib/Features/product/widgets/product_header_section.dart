@@ -2,9 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodgo_app/Core/Theme/app_colors.dart';
 import 'package:foodgo_app/Core/Theme/app_text_styles.dart';
+import 'package:foodgo_app/Core/widgets/counter.dart';
 
 class ProductHeaderSection extends StatefulWidget {
-  const ProductHeaderSection({super.key});
+  final int portionCount;
+  final void Function() onIncrement;
+  final void Function() onDecrement;
+  const ProductHeaderSection({
+    super.key,
+    required this.portionCount,
+    required this.onIncrement,
+    required this.onDecrement,
+  });
 
   @override
   State<ProductHeaderSection> createState() => _ProductHeaderSectionState();
@@ -12,7 +21,6 @@ class ProductHeaderSection extends StatefulWidget {
 
 class _ProductHeaderSectionState extends State<ProductHeaderSection> {
   double _spicyValue = 2.0;
-  int _portionCount = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -103,66 +111,11 @@ class _ProductHeaderSectionState extends State<ProductHeaderSection> {
                   style: AppTextStyles.poppins24Bold(fontSize: 18),
                 ),
                 SizedBox(height: 10.h),
-                Row(
-                  children: [
-                    IconButton(
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      onPressed: () {
-                        if (_portionCount > 1) {
-                          setState(() {
-                            _portionCount--;
-                          });
-                        }
-                      },
-                      icon: Container(
-                        padding: EdgeInsets.all(8.w),
-                        decoration: BoxDecoration(
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(10.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColors.primary.withOpacity(0.3),
-                              blurRadius: 10,
-                              offset: const Offset(0, 5),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(Icons.remove, color: Colors.white),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.w),
-                      child: Text(
-                        _portionCount.toString(),
-                        style: AppTextStyles.poppins24Bold(fontSize: 20),
-                      ),
-                    ),
-                    IconButton(
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      onPressed: () {
-                        setState(() {
-                          _portionCount++;
-                        });
-                      },
-                      icon: Container(
-                        padding: EdgeInsets.all(8.w),
-                        decoration: BoxDecoration(
-                          color: AppColors.primary,
-                          borderRadius: BorderRadius.circular(10.r),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColors.primary.withOpacity(0.3),
-                              blurRadius: 10,
-                              offset: const Offset(0, 5),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(Icons.add, color: Colors.white),
-                      ),
-                    ),
-                  ],
+                // Portion Counter
+                Counter(
+                  quantity: widget.portionCount,
+                  onIncrement: widget.onIncrement,
+                  onDecrement: widget.onDecrement,
                 ),
               ],
             ),
