@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodgo_app/Core/Theme/app_colors.dart';
-import 'package:foodgo_app/Features/cart/screens/cart_screen.dart';
+import 'package:foodgo_app/Features/cart/UI/screens/cart_screen.dart';
+import 'package:foodgo_app/Features/cart/data/models/product_model.dart';
 import 'package:foodgo_app/Features/checkout/screens/checkout_screen.dart';
 import 'package:foodgo_app/Features/home/screens/home_screen.dart';
 import 'package:foodgo_app/Features/profile/screens/profile_screen.dart';
 
 class NavRoot extends StatefulWidget {
-  NavRoot({super.key});
+  const NavRoot({super.key});
 
   @override
   State<NavRoot> createState() => _NavRootState();
@@ -24,7 +25,21 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
   void initState() {
     super.initState();
 
-    screens = [HomeScreen(), CartScreen(), CheckoutScreen(), ProfileScreen()];
+    screens = [
+      HomeScreen(),
+      CartScreen(
+        products: [
+          Product(
+            imageUrl: "assets/test/test.png",
+            title: "Product Name",
+            subtitle: "Product Subtitle",
+            quantity: 1,
+          ),
+        ],
+      ),
+      CheckoutScreen(),
+      ProfileScreen(),
+    ];
 
     controller = PageController(initialPage: 0);
     iconControllers = List.generate(
@@ -40,7 +55,9 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
   @override
   void dispose() {
     controller.dispose();
-    for (var c in iconControllers) c.dispose();
+    for (var c in iconControllers) {
+      c.dispose();
+    }
     super.dispose();
   }
 
@@ -92,7 +109,7 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
           backgroundColor: Colors.transparent,
           elevation: 0,
           selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white.withOpacity(0.6),
+          unselectedItemColor: Colors.white.withValues(alpha: 0.6),
           items: [
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.home),

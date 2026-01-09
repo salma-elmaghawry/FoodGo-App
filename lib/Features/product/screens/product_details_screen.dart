@@ -14,6 +14,21 @@ class ProductDetailsScreen extends StatefulWidget {
 class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   final ScrollController _scrollController = ScrollController();
   bool _isScrolled = false;
+  int _portionCount = 1;
+
+  void _incrementPortion() {
+    setState(() {
+      _portionCount++;
+    });
+  }
+
+  void _decrementPortion() {
+    if (_portionCount > 1) {
+      setState(() {
+        _portionCount--;
+      });
+    }
+  }
 
   @override
   void initState() {
@@ -74,7 +89,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             // Safe area space for transparent app bar
             SizedBox(height: MediaQuery.of(context).padding.top + 56.h),
             //details and slider
-            const ProductHeaderSection(),
+            ProductHeaderSection(
+              portionCount: _portionCount,
+              onIncrement: _incrementPortion,
+              onDecrement: _decrementPortion,
+            ),
             SizedBox(height: 20.h),
             //Toppings
             ProductOptionsSection(title: "Toppings", options: toppings),

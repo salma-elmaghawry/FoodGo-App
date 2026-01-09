@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:foodgo_app/main.dart';
 import 'package:foodgo_app/foodgo_app.dart';
 import 'package:foodgo_app/Core/di/dependency_injection.dart';
 

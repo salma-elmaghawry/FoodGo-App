@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodgo_app/Core/shared/custom_text_field.dart';
+import 'package:foodgo_app/Core/widgets/custom_text_field.dart';
 
 
 class CustomPasswordField extends StatefulWidget {
