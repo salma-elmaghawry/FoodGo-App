@@ -31,8 +31,14 @@ class _NavRootState extends State<NavRoot> with TickerProviderStateMixin {
         products: [
           Product(
             imageUrl: "assets/test/test.png",
-            title: "Product Name",
-            subtitle: "Product Subtitle",
+            title: "Cheeseburger",
+            subtitle: "Cheeseburger Subtitle",
+            quantity: 1,
+          ),
+          Product(
+            imageUrl: "assets/test/test.png",
+            title: "Cheeseburger",
+            subtitle: "Cheeseburger Subtitle",
             quantity: 1,
           ),
         ],
