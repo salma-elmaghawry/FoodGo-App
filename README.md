@@ -38,6 +38,8 @@ lib/
 | ![Splash](assets/screenshots/splash.png) | ![Home](assets/screenshots/home.png) | ![Product Details](assets/screenshots/product_details_1.png) | ![Product Options](assets/screenshots/product_details_2.png) |
 
 ---
+> 🚧 **This app is still in development. More features and improvements are coming soon!**
+
 ## 🛠️ Technology Stack
 
 - **Framework**: [Flutter](https://flutter.dev/)
