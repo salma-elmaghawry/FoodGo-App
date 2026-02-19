@@ -8,16 +8,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'package:foodgo_app/Core/Theme/theme_cubit.dart';
 import 'package:foodgo_app/foodgo_app.dart';
 import 'package:foodgo_app/Core/di/dependency_injection.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Initialize DI (same as main) so widgets depending on GetIt won't throw
     await setupGetIt();
-
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const FoodGoApp());
+    final themeCubit = ThemeCubit();
+    await tester.pumpWidget(FoodGoApp(themeCubit: themeCubit));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
