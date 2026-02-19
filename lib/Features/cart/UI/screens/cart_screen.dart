@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodgo_app/Features/cart/UI/widgets/cart_item_card.dart';
 import 'package:foodgo_app/Features/cart/data/models/product_model.dart';
+import 'package:foodgo_app/Features/product/widgets/bottom_order_bar.dart';
 
 class CartScreen extends StatefulWidget {
   final List<Product> products;
@@ -47,6 +48,12 @@ class _CartScreenState extends State<CartScreen> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomOrderBar(
+        price: "16.49",
+        onOrder: () {
+          // Order action
+        },
       ),
     );
   }
